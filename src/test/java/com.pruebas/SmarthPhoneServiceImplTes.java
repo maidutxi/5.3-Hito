@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.demo.service.SmartPhoneServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.*;
@@ -23,6 +24,11 @@ public class SmartPhoneServiceImplTest {
         smartPhoneService = new SmartPhoneServiceImpl();
     }
 
+    @AfterEach
+    void tearDown() {
+        smartPhoneService.deleteAll();
+        System.out.println("Limpieza después de cada prueba");
+    }
 
 
 
