@@ -45,7 +45,7 @@ public class SmartPhoneServiceImpl implements SmartPhoneService{
 
     @Override
     public Integer count() {
-        return smartphones.keySet().size();
+        return null;
     }
 
     @Override
