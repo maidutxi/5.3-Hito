@@ -29,6 +29,14 @@ public class SmarthPhoneServiceImplTes {
             smartPhoneService.findOne(null);
         });
     }
+    @Test
+    public void testCount() {
+        assertAll("count",
+                () -> assertNotNull(smartPhoneService.count()),
+                () -> assertTrue(smartPhoneService.count() > 0),
+                () -> assertEquals(3, smartPhoneService.count())
+        );
+    }
 
 
 }
